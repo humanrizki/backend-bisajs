@@ -6,7 +6,7 @@ import route from './../routes/route.js'
 import database from '../config/database.js'
 dotenv.config()
 const app = express()
-database.connect("mongodb+srv://humanrizki:humanrizki123@cluster0.d5pql.mongodb.net/bisajs?retryWrites=true&w=majority")
+database.connect(process.env.APP_URI_MONGO)
 app.use(express.json())
 app.use(cors({
     credentials: true,
