@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js init
+
+PATH: 
+  C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\MongoDB Atlas CLI;E:\xampp\php;E:\xampp\mysql\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\LENOVO\AppData\Local\Programs\Python\Python39;C:\Users\LENOVO\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\Java\jdk-15.0.1\bin;C:\Program Files\Java\jdk-14.0.2\bin;C:\Program Files\Java\jdk-13.0.1\bin;C:\Program Files\Python37\Scripts\;C:\Program Files\Python37\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Windows Live\Shared;C:\SysGCC\mingw64\bin;C:\Program Files (x86)\Java\jdk1.8.0_151\bin;C:\Program Files\Python37;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Users\LENOVO\AppData\Local\Temp\pip-uninstall-83nmu2lx;C:\Users\LENOVO\AppData\Local\Temp\pip-uninstall-_b3x52au;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\LEN;E:\RISKI\apache-maven-3.6.3\bin;C:\Program Files\Java\jdk-16.0.2\bin;C:\composer;C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\Composer\vendor\bin;C:\ProgramData\chocolatey\bin;E:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\LENOVO\AppData\Local\Android\Sdk\platform-tools;C:\Users\LENOVO\AppData\mongodb\mongosh\bin;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\LENOVO\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3.4\bin;;C:\SysGCC\mingw64\bin;C:\Users\LENOVO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\LENOVO\AppData\Roaming\Composer\vendor\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.4\bin;;C:\Program Files (x86)\MongoDB Atlas CLI\;C:\Users\LENOVO\AppData\Local\Yarn\bin;C:\Users\LENOVO\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.7.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:137150:13)
+      at Interface.emit (node:events:513:28)
+      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1124:18)
+      at ReadStream.onkeypress (node:internal/readline/interface:273:20)
+      at ReadStream.emit (node:events:513:28)
+      at emitKeys (node:internal/readline/utils:357:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+      at ReadStream.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:324:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

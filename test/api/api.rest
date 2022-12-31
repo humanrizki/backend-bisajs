@@ -1,0 +1,20 @@
+POST http://localhost:5000/lessons 
+content-type: application/json
+
+{
+    "name": "JavaScript",
+    "description": "Bahasa Pemrograman"
+}
+###
+PATCH  http://localhost:5000/lessons
+content-type: application/json
+
+{
+    "_id":"63b02b2fdcdd4c139c8cf185",
+    "name": "CSS",
+    "description": "Bukan Bahasa Pemrograman"
+}
+###
+DELETE http://localhost:5000/lessons/63b02b2fdcdd4c139c8cf185
+content-type: application/json
+
