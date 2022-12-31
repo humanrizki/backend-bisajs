@@ -1,9 +1,6 @@
 import router from "./../starter/router.js";
-import database from "./../config/database.js";
 import Lessons from "./../models/Lessons.js";
 const route = router
-database.connect("mongodb+srv://humanrizki:humanrizki123@cluster0.d5pql.mongodb.net/bisajs?retryWrites=true&w=majority")
-
 route.get('/', async(_, res)=>{
     const lessons = await Lessons.find()
     return res.status(200).json(
