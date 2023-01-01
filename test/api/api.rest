@@ -1,9 +1,16 @@
+GET http://localhost:5000/lessons/gos
+Content-Type: application/json
+###
+GET http://localhost:5000/lessons
+Content-Type: application/json
+###
 POST http://localhost:5000/lessons 
 content-type: application/json
 
 {
-    "name": "JavaScript",
-    "description": "Bahasa Pemrograman"
+    "name": "GO",
+    "description": "Bahasa Pemrograman",
+    "slug":"go"
 }
 ###
 PATCH  http://localhost:5000/lessons

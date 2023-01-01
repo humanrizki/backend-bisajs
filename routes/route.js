@@ -1,24 +1,66 @@
-import router from "./../starter/router.js";
+import { Router } from "express";
 import Lessons from "./../models/Lessons.js";
-const route = router
-route.get('/', async(_, res)=>{
-    const lessons = await Lessons.find()
+const route = Router()
+route.get('/lessons', async(_, res)=>{
+    const lessons = await Lessons.find(
+        {}, 
+        {
+            _id:0,
+            name:1,
+            description:1,
+            slug:1
+        }
+    ).exec()
     return res.status(200).json(
         lessons
     )
 })
+route.get('/lessons/:slug', async(req, res)=>{
+    const {params} = req
+    Lessons.findOne(
+        {slug: params.slug},
+        {
+            _id:0,
+            name:1,
+            description:1,
+            slug:1
+        },
+        (_, lesson)=>{
+            if(lesson == null) return res
+            .status(404)
+            .json({
+                "message":"Data tidak ditemukan"
+            })
+            return res
+            .status(200)
+            .json({
+                "message":"Data berhasil ditemukan",
+                lesson
+            })
+        })
+})
 route.post('/lessons', async(req, res)=>{
     const {body} = req
-    // console.log(body)
-    Lessons.create({...body}, (err, less)=>{
-        if(err) return res.status(500).json({
-            "message":"Gagal memasukkan data"
-        })
-        return res.status(201).json({
-            less,
-            "message":"Berhasil memasukkan data"
-        })
-    })
+    Lessons.create(
+        {...body}, 
+        async(err, less)=>{
+            if(err) return res.status(500).json({
+                "message":"Gagal memasukkan data"
+            })
+            const lesson = await Lessons.findById(less._id, 
+                {
+                    _id:0,
+                    name:1,
+                    description:1,
+                    slug:1
+                }
+            ).exec();
+            return res.status(201).json({
+                lesson,
+                "message":"Berhasil memasukkan data"
+            })
+        }
+    )
 
 })
 route.patch('/lessons', async(req, res)=>{
@@ -31,7 +73,6 @@ route.patch('/lessons', async(req, res)=>{
             "message":"Gagal mengubah data"
         })
         return res.status(200).json({
-            less,
             "message":"Berhasil mengubah data"
         })
     })

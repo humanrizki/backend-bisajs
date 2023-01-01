@@ -3,10 +3,11 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import morgan from 'morgan'
 import route from './../routes/route.js'
-import database from '../config/database.js'
+import database from './../starter/database.js'
+import mongo from './../config/mongo.js'
 dotenv.config()
 const app = express()
-database.connect(process.env.APP_URI_MONGO)
+database.connect(mongo)
 app.use(express.json())
 app.use(cors({
     credentials: true,
